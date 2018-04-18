@@ -28,30 +28,22 @@ Configure AWS Command Line tools to [work with your credentials](http://docs.aws
 
 ## Test your AWS setup
 
-The following commands should all work OK, without throwing errors:
+The following commands should all work OK, without throwing errors (add `--profile <PROFILE NAME>` to the commands if you want to use a specific profile for AWS access):
 
-1. Set up a simple IAM role
+1. Set up a simple IAM role (get the [policy.json](policy.json) file from this repository and put it in the local directory where this command is executed)
 
-  ```bash
-  aws iam create-role \
-  --role-name=hello-world-lambda-executor \
-  --assume-role-policy-document policy.json \
-  --query Role.Arn --output text
-  ```
+```bash
+aws iam create-role --role-name=hello-world-role --assume-role-policy-document file://policy.json --query Role.Arn --output text
+```
 
-2. Wait about 10 seconds, then use the result printed by the previous command instead of `<ROLE>` in the command below, to set up a simple Lambda function (get the ZIP file from the [test-lambda](test-lambda) directory and put it in the local directory where this command is executed).
+2. Wait about 10 seconds, then use the result printed by the previous command instead of `<ROLE>` in the command below, to set up a simple Lambda function (get the [test-lambda.zip](test-lambda.zip) file from this repository and put it in the local directory where this command is executed).
 
-  ```bash
-  aws lambda create-function \
-  --function-name hello-world-function \
-  --role <ROLE> \
-  --runtime nodejs8.10 \
-  --handler main.handler \
-  --zip-file fileb://test-lambda.zip 
-  ```
+```bash
+aws lambda create-function --function-name hello-world-function --role <ROLE> --runtime nodejs8.10 --handler main.handler --zip-file fileb://test-lambda.zip 
+```
 
 3. set up a simple API interface:
 
-  ```bash
-  aws apigateway create-rest-api --name test-api
-  ```
+```bash
+aws apigateway create-rest-api --name test-api
+```
