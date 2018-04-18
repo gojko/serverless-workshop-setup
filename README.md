@@ -15,8 +15,8 @@ Register for an AWS account upfront if you don't already have one. To use Lambda
 
 If you do not want to use the access credentials for your main user account, but want to set up a separate user profile for the camp, assign the following roles to the user:
 
-  * [AWSLambdaFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/AWSLambdaFullAccess), 
-  * [IAMFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/IAMFullAccess), 
+  * [AWSLambdaFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/AWSLambdaFullAccess)
+  * [IAMFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/IAMFullAccess) 
   * [AmazonAPIGatewayAdministrator](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator)
   * [AmazonS3FullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#/policies/arn:aws:iam::aws:policy/AmazonS3FullAccess)
  
