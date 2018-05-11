@@ -5,7 +5,7 @@ This page outlines how to set up your machine to attend Gojko's serverless codin
 ## Basic software required
 
 * [Node.js](https://nodejs.org) 6 or 8
-* [NPM](http://npmjs.com/) 3 or 5
+* [NPM](http://npmjs.com/) 3 or higher
 * [AWS Command line tools](https://aws.amazon.com/cli/)
 * a code editor (any will do, but something with JavaScript support will speed things up)
 
@@ -15,10 +15,8 @@ Register for an AWS account upfront if you don't already have one. To use Lambda
 
 If you do not want to use the access credentials for your main user account, but want to set up a separate user profile for the camp, assign the following roles to the user:
 
-  * [AWSLambdaFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/AWSLambdaFullAccess)
-  * [IAMFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/IAMFullAccess) 
-  * [AmazonAPIGatewayAdministrator](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator)
-  * [AmazonS3FullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#/policies/arn:aws:iam::aws:policy/AmazonS3FullAccess)
+  * [arn:aws:iam::aws:policy/IAMFullAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/IAMFullAccess) 
+  * [arn:aws:iam::aws:policy/PowerUserAccess](https://console.aws.amazon.com/iam/home?region=us-east-1#policies/arn:aws:iam::aws:policy/PowerUserAccess)
  
 If you have a company AWS account and intend to use it during the workshop, please make sure that you have access rights specified above.
 
