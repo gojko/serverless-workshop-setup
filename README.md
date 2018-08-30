@@ -7,6 +7,8 @@ This page outlines how to set up your machine to attend Gojko's serverless codin
 * [Node.js](https://nodejs.org) 6 or 8
 * [NPM](http://npmjs.com/) 3 or higher
 * [AWS Command line tools](https://aws.amazon.com/cli/)
+* [SAM Command line tools](https://github.com/awslabs/aws-sam-cli)
+* git (ideally command line tools, but any client will do)
 * a code editor (any will do, but something with JavaScript support will speed things up)
 
 ## Setup your AWS account
